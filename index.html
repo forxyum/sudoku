@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="wrap"></div>
+<span id="buttons">
+    <button class="control" onclick="makeNew()">New</button>
+    <button class="control" onclick="submit()">Submit</button>
+    <button class="control" onclick="reset()">Reset</button>
+    <button class="control" onclick="window.location.href='./leaderboard.html'">Leaderboard</button>
+  </div>
+</span>
+<div id="selection">
+    <span id="sel1" onmouseup="choose(sel1)">1</span>
+    <span id="sel2" onmouseup="choose(sel2)">2</span>
+    <span id="sel3" onmouseup="choose(sel3)">3</span>
+    <div class="split"></div>
+    <span id="sel4" onmouseup="choose(sel4)">4</span>
+    <span id="sel5" onmouseup="choose(sel5)">5</span>
+    <span id="sel6" onmouseup="choose(sel6)">6</span>
+    <div class="split"></div>
+    <span id="sel7" onmouseup="choose(sel7)">7</span>
+    <span id="sel8" onmouseup="choose(sel8)">8</span>
+    <span id="sel9" onmouseup="choose(sel9)">9</span>
+    <div class="split"></div>
+    <span id = "remove" onmouseup="choose('remove')">remove</span>
+</div>
+<div id = "timer">00:00</div>
+<button id = "mute" onclick="mute()"></button>
+<form name="leaderForm" onsubmit="save()" class="hidden" id="form" method="post">
+    Name: <input id="nameInput" type="text" name = "uname" required>
+    <input type = "submit" value="Submit">
+</form>
+<script  src="./script.js"></script>
+</body>
+</html>
